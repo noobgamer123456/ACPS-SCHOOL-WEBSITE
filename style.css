@@ -1,0 +1,366 @@
+/* ===========================
+   Global Styles
+=========================== */
+body {
+  margin: 0;
+  font-family: "Rajdhani", sans-serif;
+  background: radial-gradient(circle at top, #0a0a23, #000010);
+  color: #eee;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   Navigation Bar
+=========================== */
+.topnav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid cyan;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topnav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  transition: 0.3s;
+}
+
+.topnav a:hover {
+  color: cyan;
+  text-shadow: 0 0 8px cyan;
+}
+
+.topnav a.active {
+  color: #0ff;
+  border-bottom: 2px solid #0ff;
+}
+
+/* ===========================
+   Section Styles
+=========================== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Glow Title */
+.glow-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: cyan;
+  text-shadow: 0 0 10px cyan, 0 0 20px #00f0ff, 0 0 40px cyan;
+  animation: titlePulse 3s infinite alternate;
+}
+
+@keyframes titlePulse {
+  from {
+    text-shadow: 0 0 8px cyan, 0 0 16px #00f0ff, 0 0 30px cyan;
+  }
+  to {
+    text-shadow: 0 0 20px cyan, 0 0 40px #00f0ff, 0 0 60px cyan;
+  }
+}
+
+/* ===========================
+   Team Section
+=========================== */
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.member-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px cyan;
+}
+
+.member-name {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  color: cyan;
+  text-shadow: 0 0 5px cyan;
+}
+
+.role {
+  font-size: 1rem;
+  font-style: italic;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+  text-align: center;
+  background: #000;
+  padding: 15px;
+  color: #888;
+  border-top: 2px solid cyan;
+  text-shadow: 0 0 10px cyan;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ===========================
+   Fun Glow Animations
+=========================== */
+.glow-text {
+  color: cyan;
+  text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px #00f0ff;
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 20px #00f0ff;
+  }
+  100% {
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 40px #00f0ff;
+  }
+}
+
+/* ===========================
+   Famous Missions Page Styles
+=========================== */
+
+/* Mission Grid */
+.missions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  justify-items: center;
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.mission-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 25px cyan;
+  border: 2px solid cyan;
+}
+
+/* Glow Variants */
+.cyan-glow:hover {
+  box-shadow: 0 0 25px cyan;
+  border: 2px solid cyan;
+}
+
+.violet-glow:hover {
+  box-shadow: 0 0 25px violet;
+  border: 2px solid violet;
+}
+
+.magenta-glow:hover {
+  box-shadow: 0 0 25px magenta;
+  border: 2px solid magenta;
+}
+
+/* ===========================
+   Parallax Image Sections (Famous Missions)
+=========================== */
+.pimg1,
+.pimg2,
+.pimg3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.pimg1 {
+  background-image: url("");
+}
+.pimg2 {
+  background-image: url("");
+}
+.pimg3 {
+  background-image: url("");
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #00f0ff;
+  transform: translateY(-50%);
+}
+
+.border {
+  border: 2px solid #0ff;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* ===========================
+   Section Enhancements
+=========================== */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(10, 10, 35, 0.8);
+  margin: 0;
+  color: #eee;
+  transition: background 0.5s;
+}
+
+.section h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: cyan;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px cyan, 0 0 10px #00f0ff;
+}
+
+.section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.section:hover {
+  background: rgba(10, 10, 35, 0.95);
+  box-shadow: 0 0 20px cyan;
+}
+
+/* Gradient, Alternate, and Stars Sections */
+.gradient-bg {
+  background: linear-gradient(135deg, #0a0a23, #001f33, #0a0a23);
+  border-top: 2px solid cyan;
+  border-bottom: 2px solid cyan;
+}
+
+.alt-bg {
+  background: rgba(20, 20, 40, 0.9);
+  border-left: 5px solid violet;
+  border-right: 5px solid violet;
+}
+
+.stars-bg {
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 2px dashed magenta;
+  border-bottom: 2px dashed magenta;
+}
+
+/* ===========================
+   Starfield Background (Famous Missions)
+=========================== */
+body.famous-missions::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent url("https://i.ibb.co/7N1Dvcc/stars.png") repeat;
+  background-size: contain;
+  animation: moveStars 100s linear infinite;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+/* ===========================
+   Fun Facts Page Styles
+=========================== */
+
+/* Parallax Images for Fun Facts */
+body.fun-facts .pimg1 {
+  background-image: url("https://science.nasa.gov/wp-content/uploads/2023/06/webb-flickr-52259221868-30e1c78f0c-4k-jpg.webp");
+}
+body.fun-facts .pimg2 {
+  background-image: url("https://t4.ftcdn.net/jpg/03/86/82/73/360_F_386827376_uWOOhKGk6A4UVL5imUBt20Bh8cmODqzx.jpg");
+}
+body.fun-facts .pimg3 {
+  background-image: url("https://media.istockphoto.com/id/692243858/photo/exoplanet-in-deep-space.jpg?s=612x612&w=0&k=20&c=KQ7B3RI8_D3qeD06RtE7IuEyiDHnLGDg-Hqp8Fe8PXU=");
+}
+
+/* Starfield Background for Fun Facts */
+body.fun-facts::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent url("https://i.ibb.co/7N1Dvcc/stars.png") repeat;
+  background-size: contain;
+  animation: moveStars 120s linear infinite;
+  z-index: -1;
+  opacity: 0.3;
+}
+/* Parallax Images for Future of Space Exploration */
+body.future-project .pimg1 {
+  background-image: url("https://coe.gatech.edu/sites/default/files/styles/gtcoe_wide/public/news/head/2021/11/header.png?itok=spUsYXuW");
+}
+body.future-project .pimg2 {
+  background-image: url("https://scx2.b-cdn.net/gfx/news/2018/8-researcherdi.jpg");
+}
+body.future-project .pimg3 {
+  background-image: url("https://storiesbywilliams.com/wp-content/uploads/2013/03/spacex-icarus-670.jpg");
+}
+
+body.history-project .pimg1 {
+  background-image: url("https://idsb.tmgrup.com.tr/ly/uploads/images/2021/04/07/105938.jpg");
+}
+body.history-project .pimg2 {
+  background-image: url("https://aerospace.org/sites/default/files/styles/hero_small/public/2018-05/Space_exploration_Heroimage.jpg?itok=q5FAYN4b");
+}
+body.history-project .pimg3 {
+  background-image: url("https://spaceinfo.club/wp-content/uploads/2025/07/History-of-Space-Exploration.webp");
+}
